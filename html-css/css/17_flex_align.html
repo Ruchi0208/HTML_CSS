@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Align</title>
+	<style>
+		#container{
+
+			background: #555;
+			display:flex;
+			flex-wrap:wrap;
+
+			/* align items horizontally*/
+			justify-content:center;
+			/*options:(default:flex-start)
+			flex-start(shift to left)
+			flex-end(shift to right)
+			center
+			space-between
+			space-around
+			space-evenly
+			*/
+
+			height:600px;
+			
+			/* align items vertically(there must be height)*/
+			align-items:baseline
+			/*options:(default:stretch)
+			flex-start(top)
+			flex-end(bottom)
+			center
+			baseline
+			stretch
+			*/
+			
+			/*align items vertically where there is more space*/
+			align-content:flex-start;
+			/*options:(default:space-between)
+			flex-start
+			flex-end
+			center
+			space-between
+			space-around
+			stretch
+			*/
+
+		}
+
+		.item-1{
+			order:3;
+		}
+
+		.item-2{
+			/*align single item vertical*/
+			align-self:center;
+			/*options:
+			flex-start
+			flex-end
+			center
+			baseline
+			stretch
+			*/
+
+			order:2;
+		}
+
+		.item-3{
+			order:1;
+		}
+
+		.item{
+			background: #f4f4f4;
+			border:#ccc solid 1px;
+			padding:1rem;
+			text-align:center;
+			margin:0.5rem;
+
+			/*same as width of box*/
+			flex-basis:200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="item item-1">
+			<h3>Item 1</h3>
+		</div>
+		<div class="item item-2">
+			<h3>Item 2</h3>
+		</div>
+		<div class="item item-3">
+			<h3>Item 3</h3>
+		</div>
+	</div>
+</body>
+</html>

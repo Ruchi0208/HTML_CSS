@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex basics</title>
+	<style>
+		.container{
+			display:flex;
+			/*flex-direction:row-reverse;*/
+			flex-direction:row;
+			/*flex-direction:column;*/
+
+			/*if there are many boxes it it going to add scroll if we want to wrap so tht it will come downwards after a certain box we can do follows*/
+			flex-wrap:wrap;
+
+			/*same as above*/
+			flex-flow:row wrap;
+		}
+
+		.item{
+			background: #f4f4f4;
+			border:#ccc solid 1px;
+			padding:1rem;
+			text-align:center;
+			flex:1 /* all boxes equal*/;
+			margin:0.7rem;
+		}
+
+		.item:first-child{
+			flex:1 /*target first box*/;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 3</div>
+	</div>
+	
+</body>
+</html>

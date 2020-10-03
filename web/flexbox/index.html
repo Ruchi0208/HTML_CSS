@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website</title>
+        <style>
+            /*we use media so that even if we open it in tablet mobile or anythng it can respond accordingly and doesnt make the page look ugly and be responsive*/
+            /*min-width means that it will adapt the following property if the width is greater than or equal to that mentioned*/
+            @media(min-width:468){
+                /*display:flex will display the elements in form of box of equal width*/
+                /*boxes have same height by default if we want to change it we can ue align-items that align each item and assign it to flex-start and it will be cropped from bottom where content ends*/
+                /*if we want to move it down we can assign flex-end*/
+                /*if we want the box in centre vertically we can use centre*/
+                /*and stretch is by default*/
+                .container-1{
+                    display:flex;
+                    /*
+                    align-items:flex-start;
+                    align-items:flex-end;
+                    align-items:center;
+                
+                    flex-direction:column;
+                    */
+                }
+
+                /*justify-content is used to shift the boxes the the extreme right left or center*/
+                .container-2{
+                    display:flex;
+                    /*
+                    justify-content: flex-start;
+                    justify-content:flex-end;
+                    */
+                    /*it will jst put the margin in the middle*/
+                    /*if we will use space-around in justify-content it will ad margins to both ends too*/
+                    justify-content:space-between;
+                }
+            }
+
+            .container-3{
+                display:flex;
+                /*if we make page smallr or bigger it will wrap as many boxes together or unwrap*/
+                flex-wrap:wrap;
+                justify-content:space-between;
+            }
+/*if you want to change the direction to go vertically and not like box use flex-direction:column*/
+
+            .container-1 div , .container-2 div , .container-3 div{
+                border:1px #ccc solid;
+                padding:10px;
+            }
+/* if we assign all flex:1 then it will be divided equally ..basically it denotes ratio*/
+/*order is used to specify the position of each box horizontally*/
+
+            .box-1{
+                flex:2;
+                order:2;
+            }
+
+            .box-2{
+                flex:1;
+                order:1;
+            }
+
+            .box-3{
+                flex:1;
+                order:3;
+
+            }
+
+            .container-2-box{
+                /*u can also use flex-basis to specify width*/ 
+                flex-basis:25%;
+            }
+
+            .container-3-box{
+                flex-basis:12%;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-1">
+            <div class="box-1">
+                <h3>Box One</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="box-2">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="box-3">
+                <h3>Box Three</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+<!--if you want to have margins and specify the width-->
+        <div class="container-2">
+            <div class="container-2-box">
+                <h3>Box Four</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-2-box">
+                <h3>Box Five</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-2-box">
+                <h3>Box Six</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+<!--to wrap around-->
+        <div class="container-3">
+            <div class="container-3-box">
+                <h3>Box Seven</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Eight</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Nine</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Ten</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Eleven</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Tewlve</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>

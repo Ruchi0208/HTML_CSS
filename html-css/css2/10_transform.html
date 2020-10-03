@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform properties</title>
+	<style>
+
+		body{
+			background: #333;
+			display:flex;
+			align-items:center;
+			justify-content: center;
+			height:100vh;
+		}
+
+		.box{
+			background: white;
+			width:300px;
+			height: 300px;
+			/*rotate*/
+			transform:rotate(25deg);
+			/*skew means slanting*/
+			transform: skew(25deg);
+			/*multiplying to th value or size*/
+			transform: scale(2);
+			transition:all 1s ease-in-out;
+		}
+
+		.box:hover{
+			transform:rotate(180deg);
+			transform:skew(25deg); /*going to override the 180deg rotation*/
+			transform:scale(2);
+			
+			/*going to go 100px on y-axis*/
+			/*negative -100px will move it upwards 100px*/
+			transform:translateY(100px); 
+
+			transform:translateX(100px); /*also has negative value:for left tranlation*/
+
+			/*both x and y axis*/
+			transform:translate(100px,100px);
+
+			/*Translate 3d*/
+			transform:translate3d(100px,100px,100px);
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

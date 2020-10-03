@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds and Colors</title>
+    <style>
+        #box-1{
+            background-color: blanchedalmond;
+
+            border-width:3px;
+            border-color: red;
+            border-style:solid;
+            /* same as above */
+            border:3px solid red;
+
+            /* for rounded corners */
+            border-radius:10px;
+        }
+
+        #box-2{
+            /* background color of tht box */
+            background: #333;
+            /* color of text within tht box */
+            color:#fff;
+            border-top:blue solid 3px;
+            border-top-left-radius:10px;
+        }
+
+        #box-3{
+            background-image: url('./images/img.png');
+            /* wont repeat the image even if the image is smaller than desired area */
+            background-repeat: no-repeat;
+            /* pushes the image from x or y axis in the box */
+            /* we can just write cnter top etc instead of pixels */
+            background-position: 100px -100px; 
+            /* if we want to show the whole image within that window */
+            background-size: cover;
+
+            /* same as above combined */
+            background:url('./images/img.png') no-repeat 100px -100px/cover;
+
+            /* height and width of box */
+            height:300px;
+            width:600px;
+        }
+
+        #box-4{
+            background:url('./images/img.png') no-repeat center center;
+            /* image remains fixed to the browser window as we scroll */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        <h3>Box One</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+    </div>
+    <br>
+    <div id="box-2">
+        <h3>Box Two</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+    </div>
+    <div id="box-3">
+        <h3>Box Three</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+    </div>
+    <div id="box-4">
+        <h3>Box Four</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa corrupti dolorum totam eos odit expedita molestias aperiam consequatur officia minima?</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test File</title>
+	<style>
+		
+		h1{
+			/*removes the element completely*/
+			display:none;
+
+			/*removes the element still takes up the space i.e the space in which the element was there is still white not removed unlike display:none..in short it is jst hidden or not visible*/
+			visibility:hidden;
+			
+			/*however if we use important then it is going to override even if the other one has higher precedence*/
+			color:blue !important;
+		}
+
+		.hello{
+			/*tagetting a class has a higher precedence then targetting an element*/
+			/*but if both are class or element usually the one later overrides the previous one*/
+			color:red;
+			
+			/*we can do negative values with only margin not padding*/
+			margin-top:-30px;
+			margin-left:-30px;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1 class="hello">Hello World</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quaerat, provident totam alias ullam tempore. Nam suscipit ad molestias deleniti obcaecati laudantium, alias reiciendis harum quae, voluptatum blanditiis nisi reprehenderit.</p>
+	
+</body>
+</html>

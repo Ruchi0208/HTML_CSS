@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Box shadows</title>
+	<style>
+		.container{
+			display:flex;
+		}
+
+		.box{
+			padding:1rem;
+			margin:1rem;
+			background: coral;
+			color:#fff;
+
+			/*offset-x | offset-y | color:will be on right and bottom*/
+			box-shadow: 10px 10px teal;
+			/*offset-x | offset-y | blur-radius | color*/
+			box-shadow: 10px 10px 20px teal;
+			/*negative value:will be on left and top*/
+			box-shadow: -5px -5px 20px teal;
+			/*offset-x | offset-y | blur-radius | spread-radius | color*/
+			box-shadow:3px 3px 10px 1px rgba(0,0,0,0.3);
+			/*inset | offset-x | offset-y | color */
+			box-shadow:inset -3px -3px teal;
+			/*multiple shadows*/
+			box-shadow: 3px 3px teal, -3px -3px olive;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, odit.</p>
+		</div>
+		<div class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, odit.</p>
+		</div>
+		<div class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, odit.</p>
+		</div>
+	</div>
+	
+</body>
+</html>

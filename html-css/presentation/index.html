@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/e81741c7e3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Presentation</title>
+</head>
+<body>
+	<!-- Page 1 -->
+	<section id="page-1" class="page">
+		<h1>Welcome to my presentation</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea exercitationem ipsa officiis adipisci suscipit officia ut temporibus in ad! Ea beatae eligendi unde, itaque aut. Ratione iure consequatur corporis quod perspiciatis, nam esse, distinctio, fugiat accusantium, commodi odio voluptas!</p>
+		<div>
+			<a href="#page-2" class="btn">Next Page</a>
+			<i class="fas fa-arrow-circle-down"></i>
+		</div>
+	</section>
+
+	<!-- Page 2 -->
+	<section id="page-2" class="page">
+		<h1>Page 2 </h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea exercitationem ipsa officiis adipisci suscipit officia ut temporibus in ad! Ea beatae eligendi unde, itaque aut. Ratione iure consequatur corporis quod perspiciatis, nam esse, distinctio, fugiat accusantium, commodi odio voluptas!</p>
+		<div>
+			<a href="#page-1" class="btn btn-dark">Prev Page</a>
+			<i class="fas fa-arrow-circle-up"></i>
+
+			<a href="#page-3" class="btn">Next Page</a>
+			<i class="fas fa-arrow-circle-down"></i>
+		</div>
+	</section>
+
+	<!-- Page 3 -->
+	<section id="page-3" class="page">
+		<h1>Page 3 </h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea exercitationem ipsa officiis adipisci suscipit officia ut temporibus in ad! Ea beatae eligendi unde, itaque aut. Ratione iure consequatur corporis quod perspiciatis, nam esse, distinctio, fugiat accusantium, commodi odio voluptas!</p>
+		<div>
+			<a href="#page-2" class="btn btn-dark">Prev Page</a>
+			<i class="fas fa-arrow-circle-up"></i>
+
+			<a href="#page-4" class="btn">Next Page</a>
+			<i class="fas fa-arrow-circle-down"></i>
+		</div>
+	</section>
+
+	<!-- Page 4 -->
+	<section id="page-4" class="page">
+		<h1>Page 4 </h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea exercitationem ipsa officiis adipisci suscipit officia ut temporibus in ad! Ea beatae eligendi unde, itaque aut. Ratione iure consequatur corporis quod perspiciatis, nam esse, distinctio, fugiat accusantium, commodi odio voluptas!</p>
+		<div>
+			<a href="#page-3" class="btn">Prev Page</a>
+			<i class="fas fa-arrow-circle-up"></i>
+
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+	<script>
+		//Smooth scrolling
+		$('.btn').on('click',function(event) {
+			if(this.hash !== '') {
+				event.preventDefault();
+				const hash = this.hash;
+				$('html, body').animate(
+				{
+					scrollTop: $(hash).offset().top
+				},
+				800
+				);
+			}
+		});
+	</script>
+	
+</body>
+</html>

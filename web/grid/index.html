@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grids</title>
+        <style>
+            /*grid styles*/
+            .wrapper{
+                display:grid;
+                /*it will divide it in n number of columns if we give n number of %*/
+                /*for ex we have 2 % values below so it will divide it in 2 columns*/
+                grid-template-columns: 70% 30%;
+                /*it adds gap between columns*/
+                grid-column-gap:1em;
+                /*it adds gap between row*/
+                grid-row-gap: 1em;
+                /*it adds gap batween row and column both*/
+                grid-gap:1em;
+            }
+            /*normal styling*/
+            .wrapper div{
+                background: #eee;
+                padding: 1em;
+            }
+
+            .wrapper > div:nth-child(odd){
+                background: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab distinctio velit repellendus tempora vitae ipsa dignissimos, nihil sapiente ea iste harum numquam quo optio cum, blanditiis libero recusandae modi!</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quis consectetur sapiente unde laborum, distinctio.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab distinctio velit repellendus tempora vitae ipsa dignissimos, nihil sapiente ea iste harum numquam quo optio cum, blanditiis libero recusandae modi!</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quis consectetur sapiente unde laborum, distinctio.</p>
+            </div>
+        </div>
+    </body>
+</html>

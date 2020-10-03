@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Cheat Sheet</title>
+    </head>
+    <body>
+
+        <a href="semantic.html">Go to blog one</a>
+        <hr>
+        <br>
+
+        <!--headings-->
+        <h1>Heading One</h1>
+        <h2>Heading two</h2>
+        <h3>Heading three</h3>
+        <h4>Heading four</h4>
+        <h5>Heading five</h5>
+        <h6>Heading six</h6>
+
+        <!--Paragraphs-->
+        <p>
+            <em>Loream</em> Lorem <strong>is</strong> ipsum dolor sit amet consectetur, adipisicing elit. Neque inventore ad dignissimos numquam excepturi dicta quibusdam totam.
+        </p>
+        <p>
+            <a href="http://google.com" target="_blank">Lorem ipsum dolor</a>, sit amet consectetur adipisicing elit. Veniam vel culpa mollitia molestias ullam suscipit est ab earum illo sit. Officia totam quia animi autem maiores facere nobis dolor sed.
+            <!--blank helps to open the site link of href by opening it in another tab-->
+        </p>
+
+        <!--list-->
+            <!--unordered list-->
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+            <!--ordered list-->
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+        </ol>
+
+        <!--Table-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ruchi</td>
+                    <td>ruchi@gmail.com</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Ramya</td>
+                    <td>ruchi@gmail.com</td>
+                    <td>21</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--breakline tag-->
+        <br>
+        <!--horizontal rule:gives a line-->
+        <hr>
+        <br>
+
+        <!--Forms-->
+        <form action="process.php" method="POST">
+            <!--action submits the form to a particular page-->
+            <!--method can be post or get,post can be used for like add information to a database-->
+            <!--div will allow us to get the the form fields in diff lines..in short it is line separator for form fields-->
+            <div>
+                <label>First Name</label>
+                <input type="text" name="first name" value="Enter name">
+            </div>
+            <br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="last name" placeholder="Enter name">
+            </div>
+            <br>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <br>
+            <div>
+                <label>Msg</label>
+                <textarea name="msg"></textarea>
+            </div>
+            <br>
+            <div>
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Feale">Female</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Age</label>
+                <input type="number" name="age" value="30">
+            </div>
+            <br>
+            <div>
+                <label>Birthday</label>
+                <input type="date" name="bday">
+            </div>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <!--Button-->
+        <button>Click me</button>
+        <br>
+
+        <!--image-->
+        <a href="nature_347.jpg" target="blank">
+            <img src="nature_347.jpg" alt="My iamge" width="200" height="50">
+            <!--alt is provided so that if iamge cannot load it will show this text-->
+        </a>
+
+        <!--Quotations-->
+        <blockquote cite="http://traversymedia.com">
+            <!--provide quotation from a site-->
+            loream is a good boy.
+        </blockquote>
+
+        <!--used to know the fullform forom where abbrebiations are used-->
+        <p>The <abbr title="World Wide Web">WWW</abbr> is awesome</p>
+        
+        <!--italic to show its imp-->
+        <p><cite>HTML crash course</cite> by brad.</p>
+    </body>
+</html>

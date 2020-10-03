@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- viweport is the whole area in the browser window -->
+	<!-- whtevr tiny or big the window is always 100 vh and 100 vw slices -->
+	<meta charset="UTF-8">
+	<title>Vh and Vw units</title>
+	<style>
+		*{
+			box-sizing:border-box;
+			margin:0;
+			padding:0;
+		}
+
+		body{
+			font-family:Arial , Helvetica , sans-serif;
+		}
+
+		header{
+			background: #333 url('./images/img.png') no-repeat center center/cover;
+			color:#fff;
+			/* % wont cover whole area whereas vh will no matter how big smaller window is*/
+			height:100vh;
+			/*width:50vw;*/
+			text-align:center;
+			padding:2rem;
+			padding-top:10rem;
+		}
+
+		header h1{
+			font-size:3rem;
+		}
+
+		header p{
+			margin:1rem 0;
+		}
+
+		.btn{
+			display:inline-block;
+			text-decoration:none;
+			background: #f4f4f4;
+			color:#333;
+			padding:0.75rem 2rem;
+		}
+
+		section{
+			padding:2rem;
+		}
+
+		@media(max-height:450px){
+			header{
+				padding-top:5rem;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1>welcome to our website</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus velit quia molestias ut unde nisi dicta perspiciatis vero sit ex.</p>
+		<a href="#" class="btn">Find Out More</a>
+	</header>
+
+	<section>
+		<h3>About Our Company</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia delectus dolorum, reiciendis sequi nisi qui sunt excepturi vero beatae?</p>
+	</section>
+	
+</body>
+</html>

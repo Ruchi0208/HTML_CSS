@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Em and Rem units</title>
+	<!-- Rem adds to the root html tht is 16px by default -->
+	<!-- whereas em multiplies to the parent element -->
+	<!-- but for em if root element size is not mentioned its going to multiply to root html size -->
+	<style>
+		#box-1{
+			font-size:20px;
+		}
+		#box-1  p{
+			font-size:1.5em;
+		}
+
+		html{
+			/*as we change the root html size rem going to depend on it*/
+			font-size:10px;
+		}
+
+		#box-1 ul{
+			font-size:1.2em;
+		}
+
+		#box-2 h3{
+			font-size:2rem;
+		}
+
+		#box-2 p{
+			font-size:1.6em;
+			line-height:1.7rem;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div id="box-1">
+		<h3>Box One</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ab, expedita cum ad at temporibus quidem velit nulla a culpa.</p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3
+				<ul>
+					<li>3.1</li>
+					<li>3.2</li>
+				</ul>
+			</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<div id="box-2">
+		<h3>Box Two</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ab, expedita cum ad at temporibus quidem velit nulla a culpa.</p>
+	</div>
+	
+</body>
+</html>

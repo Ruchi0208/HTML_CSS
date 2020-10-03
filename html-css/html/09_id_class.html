@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div,Span,Id and Class</title>
+    <style>
+        .card{
+            border:1px solid #ccc;
+            background: #f4f4f4;
+            padding:20px;
+            margin-bottom: 10px;
+        }
+        .enhance{
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- id is unique i.e it can not be used for more than one element(donot repeat ids) -->
+    <!-- class isnt unique i.emore than one element can belong to same class or have same class -->
+    <div id="main-header">
+        <h1>My website</h1>
+        <p>About me</p>
+    </div>
+    <ul id="main-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div id="about" class="card">
+        <h3>About</h3>
+        <!-- if we use div in between lines so tht we have a diff styling for that line we can use div it gives us the styling -->
+        <!-- but since div is block level it pushes next line to below which we dont want -->
+        <!-- here we can use span to maintain the inline and do the styling too -->
+        <p>Lorem ipsum <div class="enhance">sit amet consectetur,</div>adipisicing elit. <span class="enhance">Consequatur officiis, obcaecati iusto</span> eum maxime at? Velit dolorum error eligendi sequi deserunt itaque enim vel officia nulla, voluptates, quod illum ex.</p>
+    </div>
+    <div id="contact" class="card">
+        <h3>Contact me</h3>
+        <ul>
+            <li>Address:Rangamatia,bbsr.</li>
+            <li>Phone:765858</li>
+            <li>email:h@i.com</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Copyright 2019</p>
+    </div>
+</body>
+</html>

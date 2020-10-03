@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Area</title>
+	<style>
+		.container{
+			display:grid;
+
+			/*we take 3 columns so we have to adjust eveything in 3 columns*/
+			/*we have to assign each part to the grid-area else it will jst make columns and not follow the order*/
+			grid-template-areas:
+			'header header header' /*header to takes all over*/
+			'contentt contentt sidebar' /*content 2fr and sidebar 1fr*/
+			'box-1 box-2 box-3' /*box 1fr equally*/
+			'footer footer footer'; /*footer takes all over*/
+
+			grid-gap:1rem;
+		}
+
+		.header{
+			grid-area:header;
+		}
+		
+		.header, .content, .sidebar, .box-1, .box-2, .box-3, .footer{
+			border:1px #ccc solid;
+			padding:0.5rem;
+		}
+
+		.header{
+			grid-area: header;
+			text-align:center;
+		}
+
+		.content{
+			grid-area: contentt;
+		}
+
+		.sidebar{
+			grid-area:sidebar;
+		}
+
+		.box-1{
+			grid-area: box-1;
+		}
+
+		.box-2{
+			grid-area: box-2;
+		}
+
+		.box-3{
+			grid-area: box-3;
+		}
+
+		.footer{
+			grid-area: footer;
+			text-align:center;
+		}
+
+		@media(max-width:500px){
+			.container{
+				grid-template-areas:
+				'header'
+				'contentt'
+				'sidebar'
+				'box-1'
+				'box-2' 
+				'box-3' 
+				'footer'; 
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<header class="header">
+			<h1>My Website</h1>
+		</header>
+
+		<section class="contentt">
+			<h3>Welcome to site</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rem veniam at quibusdam aperiam accusamus exercitationem alias labore illo. Assumenda, molestias odit? Veritatis illo ab illum aspernatur inventore mollitia, cupiditate.</p>
+		</section>
+
+		<aise class="sidebar">
+			<h3>Contact Us</h3>
+			<ul>
+				<li>Some Company</li>
+				<li>50 main street,</li>
+				<li>some@abc.mnc</li>
+				<li>666-666-666</li>
+			</ul>
+		</aise>
+
+		<div class="box-1">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a quibusdam amet commodi consequuntur vitae incidunt aspernatur quod ipsa dolorum!</p>
+		</div>
+
+		<div class="box-2">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a quibusdam amet commodi consequuntur vitae incidunt aspernatur quod ipsa dolorum!</p>
+		</div>
+
+		<div class="box-3">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt a quibusdam amet commodi consequuntur vitae incidunt aspernatur quod ipsa dolorum!</p>
+		</div>
+
+		<footer class="footer">
+			<p>Copyright &copy; 2020</p>
+		</footer>
+	</div>
+</body>
+</html>

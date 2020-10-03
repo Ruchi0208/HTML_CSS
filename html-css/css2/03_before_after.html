@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Before and after</title>
+	<style>
+
+		body{
+			background: #333;
+			color:#fff;
+			margin:0;
+		}
+
+		header{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
+			text-align:center;
+			height:100vh;
+
+			/*background: url('./img/pic.png') no-repeat center center/cover; 
+			/*its going to make the image darker as well as the letters translucent*/
+			/*opacity:0.4;*/
+		}
+
+		header:before{
+			content:'';
+			background: url('./img/pic.png') no-repeat center center/cover;
+			opacity:0.4;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index:-1;
+
+		}
+
+		header h1{
+			font-size:4rem;
+			margin:1rem;
+		}
+
+		/*puts the content after the label name*/
+		.is-required:after{
+			content:'*';
+			colo:red;
+			padding-left:2px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <label class="is-required" for="name">Name</label> -->
+	<!-- <input type="text"> -->
+
+	<header>
+		<h1>Hello World</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, accusantium.</p>
+	</header>
+
+	<section>
+		<h3>Lorem ipsum dolor sit amet.</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eligendi velit delectus eum obcaecati, pariatur veniam culpa illo soluta eveniet?</p>
+	</section>
+	
+</body>
+</html>

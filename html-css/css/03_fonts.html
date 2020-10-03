@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- grab xtra fonts from font.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>CSS Fonts</title>
+    <style>
+        body{
+            font-family: 'Roboto' ,sans-serif;
+            font-size: 18px;
+            /* height of each line and hence add space between lines and looks cleaner */
+            line-height: 1.6em;
+        }
+
+        /* if we want to add diff style to both text within span we can target them as follows */
+        #welcome p span{
+            font-weight: bold;
+        }
+
+        #about p span{
+            font-style: italic;
+        }
+        /* if we want same style for both text within span we can simply write span as element it will target all the span texts */
+    </style>
+</head>
+<body>
+    <div  id="welcome">
+        <h2>Welcome</h2>
+        <p>Lorem ipsum, dolor <span>sit amet consectetur adipisicing elit</span>. Provident nisi doloremque facere quos laboriosam hic perferendis eos officia architecto ipsam.</p>
+    </div>
+    <div id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor <span>sit amet consectetur adipisicing elit.</span> Alias repudiandae voluptates optio ut porro incidunt velit consequuntur, ad quae adipisci.</p>
+    </div>
+</body>
+</html>

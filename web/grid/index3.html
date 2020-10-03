@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid</title>
+        <style>
+            /*grid styling*/
+            .wrapper{
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-auto-rows: minmax(100px,auto);
+                grid-gap:1em;
+
+                /*if we write start it is going to put the element at the start of its column*/
+                /*if we write end it is going to put element at end of its column and if we write center it is going to put the element at center of its column*/
+                /*by default is stretch*/
+                justify-items:stretch;
+
+                /*if we write start it is going to put element at start of its row and so on*/
+                /*by default is stretch*/
+                align-items:stretch;
+
+            }
+
+
+            /*normal styling*/
+            .wrapper div{
+                background: #eee;
+                padding: 1em;
+            }
+
+            .wrapper > div:nth-child(odd){
+                background: #ddd;
+            }
+
+            .box1{
+                /*going to align only box 1 at start of row*/
+                /*do same work as align-items but for individual elements*/
+                /*align-self:start;*/
+
+                /*it is going to strech a element from (n/m) n to m column wise or horizontally*/
+                grid-column: 1/3;
+
+                /*it is going to strech a row from (n/m) n to m row wise or vertically*/
+                grid-row:1/3;
+
+            }
+
+            .box2{
+                /*align-self:end;*/
+
+                grid-column:3;
+                grid-row:1/3;
+
+            }
+
+            .box3{
+                /*going to align only box 3 at end of column*/
+                /*do same work as justify-items but for individual elements*/
+                /*justify-self:end;*/
+
+                grid-column:2/4;
+                grid-row:3;
+
+
+            }
+
+            .box4{
+                /*it can overlap the element boxes if the elements have same or overlapping numbers*/
+                grid-column:1;
+                grid-row:2/4;
+                border:1px solid #333;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box box1">Box 1</div>
+            <div class="box box2">Box 2</div>
+            <div class="box box3">Box 3</div>
+            <div class="box box4">Box 4</div>
+        </div>
+        
+    </body>
+</html>

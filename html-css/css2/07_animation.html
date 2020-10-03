@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyframes</title>
+	<style>
+		body{
+			background: #333;
+		}
+		.box{
+			background: white;
+			width:200px;
+			height:200px;
+			position:relative;
+			animation-name:animate1;
+			animation-duration:5s;
+			animation-iteration-count: 1;
+			/*after animate its going to stay at tht position only*/
+			animation-fill-mode:forwards;
+			/*Delay strt of animation*/
+			animation-delay:2s;
+			animation-direction:alternate;
+			/*frst strt slow n go fast and there are other options like ease-out and ease-in-out*/
+			animation-timing-function:ease-in;
+
+			/*same as all above*/
+			animation: animate1 5s forwards 1s;
+		}
+
+		@keyframes animate1{
+			from{
+				/*width:200px;*/
+				top:0;
+			}
+			to{
+				width:600px;
+				/*animate from white to red*/
+				background: red;
+				top:300px;
+
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	
+</body>
+</html>

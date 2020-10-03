@@ -1,0 +1,229 @@
+/*
+(this is for all or in general)
+*{
+    margin:0;
+    padding:0;
+}
+*/
+
+body{
+    background-color:white;
+    color : black;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: normal ;
+    /*same as above in a shorter way*/
+    font: normal 16px Arial , Helvetica , sans-serif;
+
+    /*em and px are unit*/
+    line-height: 1.6em;
+    margin: 0;
+}
+
+/*add global styles to the links and apply any link in page*/
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+/*states of link*/
+/*when u take your mouse on it*/
+a:hover{
+    color:red;
+}
+/*when you click on it*/
+a:Active{
+    color:green;
+}
+/*if visited already*/
+a:visited{
+    color:violet;
+}
+
+.clr{
+    clear: both;
+}
+
+.container{
+    /*px can be used as unit bt as we will make the screen smaller or bigger it wont respond*/
+    /*but % means it will respond even if we make screen smaller or bigger*/
+    width:80%;
+    margin: auto;
+}
+
+.box-1{
+    background-color: mediumpurple;
+    color: black;
+
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+    /*same as above*/
+    border:5px red solid;
+    border-width:3px;
+    border-bottom-width:10px;
+    border-top-style:dotted;
+
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:20px;
+    padding-left:20px;
+    /*same as above if value same*/
+    padding:20px;
+
+    margin-top:20px;
+    margin:20px 0;
+}
+
+.box-1 h1{
+    font-family:Tahoma ;
+    font-weight: 800;
+    font-style:italic;
+    text-decoration:underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box-2{
+    border:3px dotted #ccc;
+    padding:20px;
+    margin:20px 0;
+}
+
+.categories{
+    border:1px #ccc solid;
+    padding:10px;
+    border-radius:15px;
+}
+
+.categories h2{
+    text-align:center;
+}
+
+.categories ul{
+    padding:0;
+    padding-left:20px;
+    list-style-type: square;
+    list-style:none;
+}
+
+.categories li{
+    padding-bottom:8px;
+    border-bottom:dotted 1px #333;
+    list-style-image:url('check2.png');
+}
+
+.my-form{
+    padding:20px;
+}
+
+.form-group{
+    padding-bottom:15px;
+}
+
+.my-form label{
+    display:block; /* help separate the label and text area in diff lines*/
+}
+
+.my-form input[type="text"],textarea/*this is gonna disregard the submit button as its also an input bt not text type*/
+/*and this is not gonna include textarea i.e message box as its class is not input*/ 
+/*but we can use comma and add the textarea to include the message also as done above*/
+{
+    padding:8px;
+    width:100%;
+}
+
+.my-form input[type="submit"]
+/*or we can just globally decalre .botton and make changes there and it will help uss add same style to every button in th page and we need not write styling for each button again and again */
+/*global means it should be written above all classes*/
+/*we can also use hover to the button*/
+{
+    background-color:#333 ;
+    color:#fff;
+    padding:10px 15px;
+    border:none;
+}
+
+.block{
+    float:left;
+    width:33.3%;
+    border:1px solid #ccc;
+    padding:10px;
+    box-sizing:border-box; /*takes up everything and make a box with appropriate width padding border*/
+
+}
+
+#main-block{
+    float: left;
+    width:70%;
+    padding:15px;
+    box-sizing:border-box;
+
+}
+
+#sidebar{
+    float:right;
+    width:30%;
+    background-color: #333;
+    color: #fff;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+.p-box{
+    width:800px;
+    height:500px;
+    border:1px solid black;
+    margin-top:30px;
+    position:relative; /*if we dont right relative it is going to use whole page as a container and will be displayed 100px from top of the page*/
+    background-image: url('design.png');
+    background-position: 100px 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.p-box h1{
+    position:absolute;
+    top:100px;
+    left:200px;
+}
+
+.p-box h2{
+    position:absolute; /*going to relocate the text as mentioned from container*/
+    bottom:40px;
+    right:100px;
+}
+
+/*fixed one will stay at one position even if u scroll its still in same position of the screen*/
+.fix-me
+{
+    position: fixed;
+    top:400px;
+    background-color:#333 ;
+    color:#fff;
+    padding:10px 15px;
+    border:none;
+}
+
+
+/*pseudo ones*/
+/*going to target frst child*/
+.my-list li:first-child{
+    background: violet;
+}
+/*going to target last child*/
+.my-list li:last-child{
+    background: yellowgreen;
+}
+/*going to target nth child*/
+.my-list li:nth-child(5){
+    background: red;
+}
+/*going to target even children*/
+.my-list li:nth-child(even){
+    background:orangered;
+}

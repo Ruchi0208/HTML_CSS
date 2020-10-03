@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inline and Block styling</title>
+	<style>
+		/* change block level to inline */
+		li{
+			display:inline;
+		}
+		li a{
+			padding-right:20px;
+		}
+
+		/* change inline to block */
+		img{
+			display:block;
+			/*it means the image should be in center but we can only do this to a block level element thts y we need to make it block level*/
+			margin:auto;
+		}
+
+		.box{
+			/*cannot use width on inline*/
+			/*here we can use inline-block which i mixture of both and helps us to add width too*/
+			background: #f4f4f4;
+			display:inline-block;
+			box-szing:border-box;
+			padding:20px;
+			margin-bottom:15px;
+			width:30%;
+		}
+	</style>
+</head>
+<body>
+	<!-- change block level to inline -->
+	<ul>
+		<li><a href="#">Technology</a></li>
+		<li><a href="#">Buisness</a></li>
+		<li><a href="#">Fashion</a></li>
+	</ul>
+
+	<br><br>
+	
+	<!-- change inline to block -->
+	<img src="./images/img.png" alt="Image">
+
+	<br><br>
+
+	<div class="box">
+		<h3>Heading</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit placeat quidem delectus, tempora perferendis atque velit fuga nostrum accusamus alias!</p>
+	</div>
+	<div class="box">
+		<h3>Heading</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit placeat quidem delectus, tempora perferendis atque velit fuga nostrum accusamus alias!</p>
+	</div>
+	<div class="box">
+		<h3>Heading</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit placeat quidem delectus, tempora perferendis atque velit fuga nostrum accusamus alias!</p>
+	</div>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links an buttons</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a{
+            color:#333;
+
+            /* underline */
+            text-decoration: none;
+        }
+
+        /* when we move cursor on the link */
+        a:hover{
+            color:coral;
+            /* text-decoration: underline; */
+        }
+
+        /* when the link is already visited */
+        a:visited{
+            color:red;
+        }
+
+        /* when we click on the link or click and hold */
+        a:active{
+            color:green;
+
+        }
+
+        /* Button styling */
+        .btn{
+            background: #4c6ca0;
+            color:#fff;
+            border:none;
+            font-size:16px;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            color: #f4f4f4;
+            background: #446190;
+        }
+
+    </style>
+</head>
+<body>
+    <br>
+    <a class="btn" href="#">My link</a>
+    <br>
+    <br>
+    <br>
+    <button class="btn">My Button</button>
+    
+</body>
+</html>
